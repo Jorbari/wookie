@@ -1,0 +1,26 @@
+@import "abstract/variable";
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+
+  &_bar {
+    display: flex;
+    gap: 0 .5rem;
+  }
+
+  p {
+    color: $color_black-1;
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+
+}
+
+.active > path {
+
+  fill: #FFD43A !important;
+
+
+}

@@ -1,0 +1,33 @@
+@import "abstract/variable";
+
+.container {
+  padding: 4.6rem 0 4.6rem 6rem;
+}
+
+.genre {
+  margin-bottom: 3.4rem;
+
+  h2 {
+    font-weight: bold;
+    font-size: 3rem;
+    color: $color_black-1;
+    margin-bottom: 2.4rem;
+  }
+
+  &__movies {
+    overflow-x: auto;
+    display: flex;
+    gap: 0 3.4rem;
+  }
+}
+
+.spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner > p {
+  font-size: 2rem;
+}

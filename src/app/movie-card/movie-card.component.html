@@ -1,0 +1,7 @@
+<figure>
+  <img [src]="movie?.poster" alt="movie" loading="lazy">
+  <figcaption>
+    <h3>{{movie?.title}}</h3>
+    <app-star-rating [rating]="movie?.imdb_rating ?? 0" ></app-star-rating>
+  </figcaption>
+</figure>

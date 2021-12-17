@@ -1,0 +1,30 @@
+@import "abstract/variable";
+
+figure {
+
+  img {
+    width: 32.9rem;
+    height: 22rem;
+    border-radius: .6rem;
+    margin-bottom: 1.6rem;
+    object-fit: cover;
+    transition: all .3s ease-in;
+  }
+  img:hover {
+    transform: scale(1.1);
+    border-radius: .6rem;
+    cursor: pointer;
+  }
+
+}
+
+
+figcaption {
+  h3 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: .8rem;
+  }
+
+}
+

@@ -1,0 +1,41 @@
+<div class="container">
+
+  <button mat-icon-button aria-label="close dialog" mat-dialog-close (click)="closeView()" >
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <div class="movie__cover">
+    <img [src]="movie?.backdrop" alt="movie cover">
+  </div>
+
+  <div class="movie__detail">
+
+    <section class="top">
+      <h1 class="movie__title">{{movie?.title}}</h1>
+      <section class="movie__rating">
+        <app-star-rating [rating]="movie?.imdb_rating ?? 0" ></app-star-rating>
+      </section>
+    </section>
+
+    <section class="movie__prod">
+      <span>{{movie?.released_on | date:'y'}}</span>
+      <span>{{movie?.length}}</span>
+      <span>{{movie?.director}}</span>
+    </section>
+
+    <section class="movie__cast">
+      <h4>Cast: {{movie?.cast}}</h4>
+    </section>
+
+    <section class="movie__desc">
+      <span>Movie Description: </span>
+      {{movie?.overview}}
+    </section>
+
+
+
+  </div>
+
+
+
+</div>

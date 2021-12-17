@@ -1,0 +1,24 @@
+<div class="container" *ngIf="!toggleMovieDetialView">
+
+  <section class="spinner" *ngIf="isLoading">
+    <mat-spinner [diameter]="80" ></mat-spinner>
+  </section>
+
+  <section class="spinner" *ngIf="!isLoading && movies.length === 0">
+    <p>No search result found</p>
+  </section>
+
+  <ng-container *ngIf="movies.length > 0 && !isLoading">
+    <div class="genre" *ngFor="let movie of movies">
+      <h2> {{movie[0]}} </h2>
+      <div class="genre__movies" >
+        <app-movie-card *ngFor="let detail of movie[1]" [movie]="detail" (click)="selectMovieCard(detail)" ></app-movie-card>
+      </div>
+    </div>
+  </ng-container>
+
+</div>
+
+<ng-container *ngIf="toggleMovieDetialView">
+  <app-movie-detail [movie]="selectedMovie" (close)="closeView()" ></app-movie-detail>
+</ng-container>

@@ -1,0 +1,83 @@
+@import "abstract/variable";
+
+.container {
+  padding: 4.6rem 6rem 4.6rem 6rem;
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  gap: 0 4.2rem;
+}
+
+.movie {
+
+  &__cover {
+
+    img {
+      border-radius: .6rem;
+      height: 100%;
+      width: 47.9rem;
+      object-fit: cover;
+    }
+  }
+
+  &__detail {
+    padding: 2rem 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 3.6rem;
+  }
+
+  &__prod > span {
+    display: block;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  &__prod > span:not(:last-child) {
+    border-right: 2px solid rgba($color_black, .18);
+    padding-right: 1rem;
+  }
+
+  &__prod {
+    display: flex;
+    gap: 0 1rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__cast {
+    color: rgba($color_black, .7);
+    font-size: 1.6rem;
+    margin-bottom: 2.6rem;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+  &__desc > span {
+    font-weight: 900;
+    font-size: 1.1em;
+    display: inline-block;
+  }
+
+
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 1.6rem;
+  right: 3rem;
+  cursor: pointer;
+}
